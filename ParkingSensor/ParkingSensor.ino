@@ -1,8 +1,8 @@
 #include <LiquidCrystal.h>
 
 // Pin Definitions
-#define HCSR04_PIN_TRIG	3
-#define HCSR04_PIN_ECHO	2
+#define HCSR04_PIN_TRIG	2
+#define HCSR04_PIN_ECHO	3
 #define LCD_PIN_RS	12
 #define LCD_PIN_E	11
 #define LCD_PIN_DB4	4
@@ -10,8 +10,8 @@
 #define LCD_PIN_DB6	8
 #define LCD_PIN_DB7	10
 #define LEDG_PIN_VIN	5
-#define LEDY_PIN_VIN	6
-#define LEDR_PIN_VIN	9
+#define LEDY_PIN_VIN	9
+#define LEDR_PIN_VIN	6
 #define PB_LCD_TOGGLE 13
 #define POTENTIOMETER_PIN_SIG_A	A0
 
