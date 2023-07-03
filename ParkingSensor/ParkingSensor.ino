@@ -42,6 +42,10 @@ void setup() {
   pinMode(LEDY_PIN_VIN, OUTPUT);
   pinMode(LEDR_PIN_VIN, OUTPUT);
 
+  digitalWrite(LEDR_PIN_VIN, HIGH);
+  digitalWrite(LEDY_PIN_VIN, HIGH);
+  digitalWrite(LEDG_PIN_VIN, HIGH);
+
   Serial.begin(9600);
   while (!Serial) ; // wait for serial port to connect. Needed for native USB
   Serial.println("Start.");
@@ -54,12 +58,23 @@ void setup() {
   lcd.setCursor(0, 1);
   lcd.print("Made by Sarah :)");
 
-  digitalWrite(LEDR_PIN_VIN, HIGH);
-  digitalWrite(LEDY_PIN_VIN, HIGH);
-  digitalWrite(LEDG_PIN_VIN, HIGH);
-
   delay(5000);
   lcd.clear();
+
+  digitalWrite(LEDR_PIN_VIN, LOW);
+  digitalWrite(LEDY_PIN_VIN, LOW);
+  digitalWrite(LEDG_PIN_VIN, LOW);
+  delay(1000);
+
+  Serial.println("Testing red LED.");
+  digitalWrite(LEDR_PIN_VIN, HIGH);
+  delay(1000);
+  Serial.println("Testing yellow LED.");
+  digitalWrite(LEDY_PIN_VIN, HIGH);
+  delay(1000);
+  Serial.println("Testing green LED.");
+  digitalWrite(LEDG_PIN_VIN, HIGH);
+  delay(1000);
 
   digitalWrite(LEDR_PIN_VIN, LOW);
   digitalWrite(LEDY_PIN_VIN, LOW);
